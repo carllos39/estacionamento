@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cliente</title>
+</head>
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li><a href="formCliente.html">Formulário de Cliente</a></li>
+            <li><a href="listaCliente.html">Lista de Cliente</a></li>
+            <li><a href="formFuncionario.html">Formulário de Cliente</a></li>
+            <li><a href="listaFuncionario.html">Formulário de Funcionário</a></li>
+         </ul>
+      </nav>
+   </header>
+    <h1>Formulário de Cliente</h1>
+    <form id="frmCliente">
+      <div>
+         <input type="hidden" id="id">
+      </div>
+     <div>
+        <label>Veiculo :</label>
+        <input type="text" id="veiculo">
+     </div>
+     <div>
+        <label>Cpf :</label>
+        <input type="text" id="cpf">
+     </div>
+     <div>
+        <label>Nome :</label>
+        <input type="text" id="nome">
+     </div>
+     <button type="submit">Cadastrar</button>
+    </form>
+    <a href="listaCliente.html">Lista</a>
+    <script type="module" src="clienteController.js"></script>
+</body>
+</html>

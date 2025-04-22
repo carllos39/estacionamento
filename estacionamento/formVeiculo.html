@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Veiculos</title>
+</head>
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li><a href="formCliente.html">Formulário de Cliente</a></li>
+            <li><a href="listaCliente.html">Lista de Cliente</a></li>
+            <li><a href="formFuncionario.html">Formulário de Cliente</a></li>
+            <li><a href="listaFuncionario.html">Formulário de Funcionário</a></li>
+            <li><a href="formVeiculo.html">Formulário de Funcionário</a></li>
+         </ul>
+      </nav>
+   </header>
+    <h1>Formulário de Veiculos</h1>
+    <form id="frmVeiculo">
+      <div>
+         <input type="hidden" id="id">
+      </div>
+     <div>
+        <label>Placa :</label>
+        <input type="text" id="placa">
+     </div>
+     <div>
+        <label>Modelo :</label>
+        <input type="text" id="modelo">
+     </div>
+     <div>
+        <label>Cor :</label>
+        <input type="text" id="cor">
+     </div>
+     <div>
+        <label>Tipo :</label>
+        <input type="text" id="tipo">
+     </div>
+     <button type="submit">Cadastrar</button>
+    </form>
+   
+    <script type="module" src="veiculoController.js"></script>
+</body>
+</html>
