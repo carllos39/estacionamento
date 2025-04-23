@@ -65,7 +65,7 @@ export class Funcionario extends Pessoa {
 
     constructor(matricula, cargo, cpf, nome) {
         super(cpf, nome);
-        this.#id = Funcionario.getProximoId();
+        this.#id = Funcionario.getProximoIf();
         this.#matricula = matricula;
         this.#cargo = cargo;
     }
@@ -78,7 +78,7 @@ export class Funcionario extends Pessoa {
         return `Funcionario: ${this.matricula} | Cargo: ${this.cargo} | CPF: ${this.cpf} | Nome: ${this.nome}`;
     }
 
-    static getProximoId() {
+    static getProximoIf() {
         let maxId = 0;
         for (let i = 0; i < localStorage.length; i++) {
             const chave = localStorage.key(i);

@@ -1,0 +1,16 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+input{
+    padding: 5px;
+    margin: 5px;
+    border-radius: 4px;
+}
+ul{
+    list-style: none;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+}

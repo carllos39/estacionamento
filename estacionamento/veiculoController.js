@@ -33,4 +33,5 @@ if(urlParams.has('id')) {
     document.getElementById("tipo").value = veiculo.tipo;
 
 }
+   
 });

@@ -25,9 +25,13 @@ ul.innerHTML= '<li>Nenhum cliente cadastrado!</li>'
           BancoCliente.excluir(c.id);
          window.location.reload();
         };
-     
+        const btnCliente = document.createElement("button");
+        btnCliente.textContent= "cadastrar veiculo";
+        btnCliente.onclick =()=> window.location.href=`formVeiculo.html?id=${c.id}`;
+        btnCliente.style.backgroundColor="blue";
+        btnCliente.style.color="white";
 
-      li.append(btnEditar,btnExcluir);
+      li.append(btnEditar,btnExcluir,btnCliente);
 
       ul.appendChild(li);
     });
