@@ -3,8 +3,8 @@ import { BancoFuncionario } from "./BancoFuncionario.js";
 const ul = document.getElementById("listaFuncionario");
 const funcionarios = BancoFuncionario.buscaTodos();
 
-if(funcionarios===0){
-ul.innerHTML= '<li>Nenhum funcionário cadastrado!</li>'
+if(funcionarios.length === 0){
+ul.innerHTML= '<li>Nenhum funcionário cadastrado!</li>';
 }else{
     funcionarios.forEach(f => {
         const li = document.createElement("li");

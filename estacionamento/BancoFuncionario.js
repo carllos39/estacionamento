@@ -3,6 +3,7 @@ import { Funcionario } from "./Pessoa.js";
 export class BancoFuncionario{
    static salvar(funcionario){
    localStorage.setItem(funcionario.id, JSON.stringify({
+    id:funcionario.id,
     matricula:funcionario.matricula,
     cargo:funcionario.cargo,
     cpf:funcionario.cpf,

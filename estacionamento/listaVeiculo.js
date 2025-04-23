@@ -1,13 +1,13 @@
 import { BancoVeiculo } from "./BancoVeiculo.js";
 
 
-const ul= document.getElementById("listaVeiculo");
-const veiculos = BancoVeiculo.buscarTodos();
+const ul = document.getElementById("listaVeiculo");
+const veiculos=BancoVeiculo.buscarTodos();
 
 if(veiculos.length===0){
-ul.innerHTML= '<li>Nenhum veiculos cadastrado!</li>'
+ul.innerHTML= '<li>Nenhum veiculos cadastrado!</li>';
 }else{
-    veiculos.forEach(c=>{
+    veiculos.forEach(v =>{
       const li = document.createElement("li");
       li.textContent = v.toString();  
     // Criar o botão editar

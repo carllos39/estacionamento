@@ -9,7 +9,7 @@ export class Veiculo{
 #cliente_id;
 
 constructor(id,placa,modelo,cor,tipo,cliente_id){
-    this.#id = Veiculo.getProximoId(id);
+    this.#id = Veiculo.getProximoIv(id);
     this.#placa = placa;
     this.#modelo = modelo;
     this.#cor = cor;
@@ -32,7 +32,7 @@ toString() {
     return `Placa: ${this.placa} | Modelo: ${this.modelo} | Cor: ${this.cor} | Tipo: ${this.tipo}| Cliente: ${this.cliente_id}`;
 }
 
-static getProximoId() {
+static getProximoIv() {
     let maxId = 0;
     for (let i = 0; i < localStorage.length; i++) {
         const chave = localStorage.key(i);
@@ -51,13 +51,14 @@ atualizarDados(novaPlaca, novoModelo, novaCor, novoTipo) {
     this.#placa = novaPlaca;  
     this.#modelo = novoModelo;  
     this.#cor= novaCor;  
-    this.#tipo= novoTipo;  
+    this.#tipo= novoTipo; 
+    this.#cliente_id =novoCliente; 
     
 }
 
 
 static fromJSON(json) {
-    const veiculo = new Veiculo(json.placa, json.modelo, json.cor, json.tipo);
+    const veiculo = new Veiculo(json.placa, json.modelo, json.cor, json.tipo,json.Cliente);
     veiculo.#id = json.id;
     return veiculo;
 }

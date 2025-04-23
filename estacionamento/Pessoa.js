@@ -17,7 +17,7 @@ export class Cliente extends Pessoa {
 
     constructor(veiculo, cpf, nome) {
         super(cpf, nome);
-        this.#id = Cliente.getProximoId();
+        this.#id = Cliente.getProximoIC();
         this.#veiculo = veiculo;
     }
 
@@ -25,10 +25,10 @@ export class Cliente extends Pessoa {
     get veiculo() { return this.#veiculo; }
 
     toString() {
-        return `Veiculo : ${this.veiculo} | CPF: ${this.cpf} | Nome: ${this.nome}`;
+        return `ID:${this.id}| Veiculo : ${this.veiculo} | CPF: ${this.cpf} | Nome: ${this.nome}`;
     }
 
-    static getProximoId() {
+    static getProximoIC() {
         let maxId = 0;
         for (let i = 0; i < localStorage.length; i++) {
             const chave = localStorage.key(i);

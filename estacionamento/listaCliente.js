@@ -4,7 +4,7 @@ const ul= document.getElementById("listaCliente");
 const clientes = BancoCliente.buscaTodos();
 
 if(clientes.length===0){
-ul.innerHTML= '<li>Nenhum cliente cadastrado!</li>'
+ul.innerHTML= '<li>Nenhum cliente cadastrado!</li>';
 }else{
     clientes.forEach(c=>{
       const li = document.createElement("li");
@@ -25,13 +25,9 @@ ul.innerHTML= '<li>Nenhum cliente cadastrado!</li>'
           BancoCliente.excluir(c.id);
          window.location.reload();
         };
-        const btnCliente = document.createElement("button");
-        btnCliente.textContent= "cadastrar veiculo";
-        btnCliente.onclick =()=> window.location.href=`formVeiculo.html?id=${c.id}`;
-        btnCliente.style.backgroundColor="blue";
-        btnCliente.style.color="white";
 
-      li.append(btnEditar,btnExcluir,btnCliente);
+
+      li.append(btnEditar,btnExcluir);
 
       ul.appendChild(li);
     });
