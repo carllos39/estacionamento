@@ -8,7 +8,7 @@ const placa = document.getElementById("placa").value ;
 const modelo = document.getElementById("modelo").value ;
 const cor= document.getElementById("cor").value ;
 const tipo = document.getElementById("tipo").value ;
-const cliente_id= document.getElementById("cliente_id");
+const cliente_id= document.getElementById("cliente_id").value;
 
 
  if(id){
