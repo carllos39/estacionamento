@@ -1,4 +1,4 @@
-import { BancoCliente } from "./bancoCliente.js";
+import { BancoCliente } from "./BancoCliente";
 
 const ul= document.getElementById("listaCliente");
 const clientes = BancoCliente.buscaTodos();
